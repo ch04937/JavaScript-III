@@ -24,7 +24,7 @@ function myName(name) {
 // code example for Implicit Binding
 
 const myObj = {
-    greeting: 'hello',
+    greeting: 'hello ',
     sayHello: function(name){
         console.log(`${this.greeting} my name is ${name}`);
         console.log(this);
@@ -43,7 +43,11 @@ function CordialPerson(greeter){
     console.log(this);
 };
 }
-
+const carlos = new CordialPerson('hernandez');
+const hernandez = new CordialPerson('carlos');
+carlos.speak();
+hernandez.speak();
 // Principle 4
-
+carlos.speak.call(hernandez);
+hernandez.speak.apply(carlos);
 // code example for Explicit Binding
